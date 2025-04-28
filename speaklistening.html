@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>English Test - Speaking and Listening</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/speaklistening.css">
+</head>
+<body>
+
+  <h1>English Test</h1>
+
+  <div id="menu">
+    <button onclick="startListening()">Listening Test</button>
+    <button onclick="startSpeaking()">Speaking Test</button>
+    
+
+  </div>
+
+  <div id="listening" style="display:none;">
+    <h2>Listen and Write</h2>
+    <audio id="audio-player" controls>
+      <source src="audio/Hello.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="listening-answer" placeholder="Type what you hear">
+    <button onclick="checkListening()">Submit Answer</button>
+    <button onclick="goHome()">Back to Menu</button>
+  </div>
+
+  <div id="speaking" style="display:none;">
+    <h2>Speak the word</h2>
+    <button onclick="recordSpeech()">Start Speaking</button>
+    <p id="speech-text">Your speech will appear here...</p>
+    <button onclick="goHome()">Back to Menu</button>
+  </div>
+
+  <script src="./js/speakinglistening.js"></script>
+
+</body>
+</html>
