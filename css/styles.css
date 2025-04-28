@@ -10827,6 +10827,129 @@ p {
   line-height: 1.75;
 }
 
+/* General styles */
+
+#loading {
+  font-size: 24px;
+  color: #ffc800;
+  margin-top: 50px;
+}
+
+.tests {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 50vh;
+}
+
+/* Headers */
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Level selection buttons */
+#level-selection button {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#level-selection button:hover {
+  background-color: #45a049;
+}
+
+/* Test container */
+#test-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Options */
+#options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  background-color: #ffc800;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#options button:hover {
+ 
+  opacity: 0.7;
+}
+
+#options button:active{
+  opacity: 0.5;
+}
+
+/* Result container */
+#result-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Try Again Button */
+#result-container button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #f44336;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#result-container button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  #test-container, #result-container {
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  #level-selection button, #options button {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+
+
 .page-section {
   padding: 6rem 0;
 }
@@ -10899,8 +11022,7 @@ p {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+   
     border: none;
     background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;

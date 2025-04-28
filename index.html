@@ -18,20 +18,22 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Brightfound                </a>
+                <a class="./index.html" href="#page-top">
+                    <img src="./assets/img/logo.png" width="220" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Yo'nalishlar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Imtihonlar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Biz haqimizda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Jamoad</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Biz bilan bog'lanish</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#services">Yo'nalishlar</a></li>
+                        <li class="nav-item"><a class="text-dark nav-link" href="#portfolio">Imtihonlar</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#about">Biz haqimizda</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#team">Bizning Jamoa</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#contact">Biz bilan bog'lanish</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +78,9 @@
                 </div>
             </div>
         </section>
-        <!-- Portfolio Grid-->
+
+    
+        <!-- IMTIHONLAR-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
@@ -133,6 +137,35 @@
                 </div>
             </div>
         </section>
+
+        <section class="tests">
+            <div class="container">
+         
+                <div id="start-screen">
+                    <h1>Ingiliz tili darajangizni tekshiring</h1>
+                    <button onclick="startTest()" class="btn btn-primary btn-xl text-uppercase">Testni boshlash</button>
+                  </div>
+                
+                  <div id="loading" style="display:none;">
+                    <p>Loading...</p>
+                  </div>
+                
+                  <div id="test-screen" style="display:none;">
+                    <div id="progress"></div>
+                    <h2 id="question-text"></h2>
+                    <div id="options"></div>
+                  </div>
+                
+                  <div id="result-screen" style="display:none;">
+                    <h2>Your English Level is:</h2>
+                    <p id="result"></p>
+                    <button onclick="restartTest()" class="btn btn-primary btn-xl text-uppercase">Restart Test</button>
+                  </div>
+                  
+                   
+            </div>
+        </section>
+
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
