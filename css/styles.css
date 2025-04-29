@@ -11060,8 +11060,15 @@ header{
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/img/hero-bg.jpg);
   background-size: cover;
   background-position: center;
-
 }
+
+@media only screen and (max-width: 440px){
+  header{
+    width: 440px;
+    height: 100%;
+  }
+}
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
