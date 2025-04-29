@@ -78,11 +78,11 @@ let score = 0;
 let askedQuestions = [];
 
 function startTest() {
-  document.getElementById('start-screen').style.display = 'none';
+  document.getElementById('test-start-screen').style.display = 'none';
   document.getElementById('loading').style.display = 'block';
   setTimeout(() => {
     document.getElementById('loading').style.display = 'none';
-    document.getElementById('test-screen').style.display = 'block';
+    document.getElementById('test-test-screen').style.display = 'block';
     showQuestion();
   }, 1500);
 }
@@ -125,9 +125,9 @@ function selectAnswer(selected) {
 }
 
 function showResult() {
-  document.getElementById('test-screen').style.display = 'none';
-  document.getElementById('result-screen').style.display = 'block';
-  document.getElementById('result').innerText = currentDifficulty;
+  document.getElementById('test-test-screen').style.display = 'none';
+  document.getElementById('test-result-screen').style.display = 'block';
+  document.getElementById('test-result').innerText = currentDifficulty;
 }
 
 

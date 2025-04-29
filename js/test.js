@@ -29,10 +29,7 @@ const speakingQuestions = [
     document.getElementById('test-screen').style.display = 'block';
   }
   
-  function startSpeakingTest() {
-    currentTest = "speaking";
-    startQuestionnaire(speakingQuestions);
-  }
+
   
   function startWritingTest() {
     currentTest = "writing";
@@ -44,10 +41,7 @@ const speakingQuestions = [
     startQuestionnaire(readingQuestions);
   }
   
-  function startListeningTest() {
-    currentTest = "listening";
-    startQuestionnaire(listeningQuestions);
-  }
+
   
   function startQuestionnaire(questions) {
     currentQuestionIndex = 0;

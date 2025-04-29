@@ -1,5 +1,5 @@
 function startListening() {
-    document.getElementById('menu').style.display = 'none';
+    document.getElementById('speaking-menu').style.display = 'none';
     document.getElementById('listening').style.display = 'block';
   }
   
@@ -11,7 +11,7 @@ function startListening() {
   function goHome() {
     document.getElementById('listening').style.display = 'none';
     document.getElementById('speaking').style.display = 'none';
-    document.getElementById('menu').style.display = 'block';
+    document.getElementById('speaking-menu').style.display = 'block';
   }
   
   // Listening javobini tekshirish
