@@ -10968,7 +10968,7 @@ h2 {
 
 @media (min-width: 768px) {
   section {
-    padding: 9rem 0;
+    padding: 6rem 0;
   }
 }
 .btn-xl {
@@ -11055,12 +11055,7 @@ h2 {
   }
 }
 
-header{
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/img/hero-bg.jpg);
-  background-size: cover;
-  background-position: center;
-}
+
 
 @media only screen and (max-width: 440px){
   header{
@@ -11070,7 +11065,8 @@ header{
 }
 
 header.masthead {
-  padding-top: 10.5rem;
+  margin-top: 100px;
+  padding-top: 40.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
@@ -11088,6 +11084,16 @@ header.masthead .masthead-heading {
   line-height: 3.25rem;
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.background-video{
+       position: absolute;
+    z-index: -10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -11190,6 +11196,52 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
+}
+
+.cards-container {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  margin-left: 27%;
+  width: 150px;
+  height: 150px;
+
+}
+
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
 }
 
 .timeline {
