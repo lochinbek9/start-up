@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -51,14 +52,19 @@
 
         </div>
     </header>
-    <section class="english-test">
+    <section class="english-test py-10">
         <div class="container">
-            <h2>Darajani bilish testini boshlash</h2>
-            <a href="./test.html" class="btn btn-primary btn-xl text-uppercase" style="margin-left: 40%;">
-                Tesni boshlash
-            </a>
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <h2 class="mb-4">Darajani bilish testini boshlash</h2>
+                    <a href="./test.html" class="btn btn-primary btn-lg text-uppercase">
+                        Tesni boshlash
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+    
     <!-- IMTIHONLAR-->
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
@@ -234,103 +240,91 @@
         </div>
     </section>
 
-    <!-- About-->
-    <section class="page-section" id="about">
+    <!-- About-->    
+    <section class="about-us py-5 bg-light">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Biz haqimizda</h2>
-
+            <h2 class="text-center mb-5">Biz Haqimizda</h2>
+            <div id="aboutUsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" style="padding-left: 7%;">
+                <div class="carousel-inner">
+                    <!-- First Slide: Cards 1, 2, 3 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://via.placeholder.com/300x200?text=Member+1" class="card-img-top" alt="Team Member 1" loading="lazy">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jamoa A'zosi 1</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://via.placeholder.com/300x200?text=Member+2" class="card-img-top" alt="Team Member 2" loading="lazy">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jamoa A'zosi 2</h5>
+                                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://via.placeholder.com/300x200?text=Member+3" class="card-img-top" alt="Team Member 3" loading="lazy">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jamoa A'zosi 3</h5>
+                                        <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Slide: Cards 4, 5, 6 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://via.placeholder.com/300x200?text=Member+4" class="card-img-top" alt="Team Member 4" loading="lazy">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jamoa A'zosi 4</h5>
+                                        <p class="card-text">Excepteur sint occaecat cupidatat non proident.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://via.placeholder.com/300x200?text=Member+5" class="card-img-top" alt="Team Member 5" loading="lazy">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jamoa A'zosi 5</h5>
+                                        <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://via.placeholder.com/300x200?text=Member+6" class="card-img-top" alt="Team Member 6" loading="lazy">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jamoa A'zosi 6</h5>
+                                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                 <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutUsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutUsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
             </div>
-            <ul class="timeline">
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-
-                            <h4 class="subheading">Bizning maqsad</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted"> "O’quv jarayoniga o’yin elementlari va mukofotlar tizimini
-                                integratsiya qilish orqali talabalarning motivatsiyasini oshirish</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-
-                            <h4 class="subheading">Bizning maqsad</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Ta’lim olayotgan sohalariga bo’lgan qiziqishlarini kuchaytirish va
-                                o’zlashtirish samaradorligini ta’minlash."</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-
-                            <h4 class="subheading">Mavjud muammolar</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">1. O‘quv markazlari uchun samarali monitoring va tahlil vositalarining
-                                yo‘qligi
-
-                                2. Rag‘batlantirishning yetishmasligi
-
-                                3. O‘quvchilar o‘rtasida raqobatni oshirish uchun vositalarning yo‘qligi
-
-                                4. O‘quv jarayonida o‘quvchilarga interaktiv va gamifikatsiya elementlarining
-                                yetishmasligi
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-
-                            <h4 class="subheading">Yechim</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">O‘quvchilarning faoliyatini doimiy ravishda kuzatish va tahlil qilish
-                                imkoniyati
-
-                                Gamifikatsiya yani talabalar o‘z faoliyatlari va muvaffaqiyatlari uchun ball to‘plash
-                                tizimini joriy qilish
-
-                                O‘quvchilar o‘rtasida faoliyat bo‘yicha raqobatni oshirish uchun umumiy va individual
-                                leaderboards taqdim etish
-
-                                O‘quvchilar uchun turli xil interaktiv vazifalar va o‘quv faoliyatlarini taklif etish
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image">
-                        <h4>
-                            Bizning
-                            <br />
-                            Jamoamizni
-                            <br />
-                            Bir qismi
-                            <br>
-                            bo'ling
-                        </h4>
-                    </div>
-                </li>
-            </ul>
         </div>
     </section>
+
     <!-- Team-->
     <section class="page-section bg-light" id="team">
         <div class="container">
