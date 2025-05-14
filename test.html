@@ -3,37 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+    <title>English Level Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            display: none;
+            margin-bottom: 20px;
+        }
+        .question.active {
+            display: block;
+        }
+        .question h3 {
+            margin: 0 0 10px;
+            color: #444;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+        }
+        .option input {
+            margin-right: 10px;
+        }
+        .option label {
+            cursor: pointer;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .navigation button {
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .navigation button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .navigation button:hover:not(:disabled) {
+            background: #0056b3;
+        }
+        .result, .review {
+            display: none;
+            text-align: center;
+        }
+        .result.active, .review.active {
+            display: block;
+        }
+        .result h2, .review h2 {
+            color: #333;
+        }
+        .review-question {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .question-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .question-nav button {
+            padding: 8px 12px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .question-nav button:hover {
+            background: #0056b3;
+        }
+        .question-nav button.active {
+            background: #28a745;
+        }
+    </style>
 </head>
 <body>
-    <section class="tests">
-        <div class="container">
-            <div id="test-start-screen">
-                <h1>Ingiliz tili darajangizni tekshiring</h1>
-                <button onclick="startTest()" class="btn btn-primary btn-xl text-uppercase">Testni boshlash</button>
-              </div>
-            
-              <div id="loading" style="display:none;">
-                <p>Loading...</p>
-              </div>
-            
-              <div id="test-test-screen" style="display:none;">
-                <div id="progress"></div>
-                <h2 id="question-text"></h2>
-                <div id="options"></div>
-              </div>
-            
-              <div id="test-result-screen" style="display:none;">
-                <h2>Your English Level is:</h2>
-                <p id="test-result"></p>
-                <button onclick="restartTest()" class="btn btn-primary btn-xl text-uppercase">Restart Test</button>
-              </div>
-              
-               
+    <div class="container">
+        <h1>English Level Test</h1>
+        
+        <!-- Questions (25 total, easy to difficult) -->
+        <div class="question" data-correct="b">
+            <h3>1. What is the correct form of the verb? <br> She ___ to school every day.</h3>
+            <div class="option"><input type="radio" name="q1" value="a" id="q1a"><label for="q1a">a) go</label></div>
+            <div class="option"><input type="radio" name="q1" value="b" id="q1b"><label for="q1b">b) goes</label></div>
+            <div class="option"><input type="radio" name="q1" value="c" id="q1c"><label for="q1c">c) going</label></div>
         </div>
-      </section>
+        <div class="question" data-correct="c">
+            <h3>2. Choose the correct article: <br> I have ___ cat.</h3>
+            <div class="option"><input type="radio" name="q2" value="a" id="q2a"><label for="q2a">a) an</label></div>
+            <div class="option"><input type="radio" name="q2" value="b" id="q2b"><label for="q2b">b) the</label></div>
+            <div class="option"><input type="radio" name="q2" value="c" id="q2c"><label for="q2c">c) a</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>3. What is the plural of "child"?</h3>
+            <div class="option"><input type="radio" name="q3" value="a" id="q3a"><label for="q3a">a) children</label></div>
+            <div class="option"><input type="radio" name="q3" value="b" id="q3b"><label for="q3b">b) childs</label></div>
+            <div class="option"><input type="radio" name="q3" value="c" id="q3c"><label for="q3c">c) childes</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>4. Complete the sentence: <br> I ___ a student.</h3>
+            <div class="option"><input type="radio" name="q4" value="a" id="q4a"><label for="q4a">a) is</label></div>
+            <div class="option"><input type="radio" name="q4" value="b" id="q4b"><label for="q4b">b) am</label></div>
+            <div class="option"><input type="radio" name="q4" value="c" id="q4c"><label for="q4c">c) are</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>5. Choose the correct word: <br> ___ is my favorite color.</h3>
+            <div class="option"><input type="radio" name="q5" value="a" id="q5a"><label for="q5a">a) An</label></div>
+            <div class="option"><input type="radio" name="q5" value="b" id="q5b"><label for="q5b">b) A</label></div>
+            <div class="option"><input type="radio" name="q5" value="c" id="q5c"><label for="q5c">c) Blue</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>6. What is the past tense of "go"?</h3>
+            <div class="option"><input type="radio" name="q6" value="a" id="q6a"><label for="q6a">a) went</label></div>
+            <div class="option"><input type="radio" name="q6" value="b" id="q6b"><label for="q6b">b) gone</label></div>
+            <div class="option"><input type="radio" name="q6" value="c" id="q6c"><label for="q6c">c) going</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>7. Choose the correct preposition: <br> I live ___ London.</h3>
+            <div class="option"><input type="radio" name="q7" value="a" id="q7a"><label for="q7a">a) at</label></div>
+            <div class="option"><input type="radio" name="q7" value="b" id="q7b"><label for="q7b">b) in</label></div>
+            <div class="option"><input type="radio" name="q7" value="c" id="q7c"><label for="q7c">c) on</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>8. What is the opposite of "big"?</h3>
+            <div class="option"><input type="radio" name="q8" value="a" id="q8a"><label for="q8a">a) large</label></div>
+            <div class="option"><input type="radio" name="q8" value="b" id="q8b"><label for="q8b">b) tall</label></div>
+            <div class="option"><input type="radio" name="q8" value="c" id="q8c"><label for="q8c">c) small</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>9. Complete the sentence: <br> They ___ playing football yesterday.</h3>
+            <div class="option"><input type="radio" name="q9" value="a" id="q9a"><label for="q9a">a) were</label></div>
+            <div class="option"><input type="radio" name="q9" value="b" id="q9b"><label for="q9b">b) was</label></div>
+            <div class="option"><input type="radio" name="q9" value="c" id="q9c"><label for="q9c">c) are</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>10. Choose the correct word: <br> I have two ___.</h3>
+            <div class="option"><input type="radio" name="q10" value="a" id="q10a"><label for="q10a">a) cat</label></div>
+            <div class="option"><input type="radio" name="q10" value="b" id="q10b"><label for="q10b">b) cats</label></div>
+            <div class="option"><input type="radio" name="q10" value="c" id="q10c"><label for="q10c">c) cat's</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>11. What is the correct question form? <br> ___ you like to read?</h3>
+            <div class="option"><input type="radio" name="q11" value="a" id="q11a"><label for="q11a">a) Are</label></div>
+            <div class="option"><input type="radio" name="q11" value="b" id="q11b"><label for="q11b">b) Is</label></div>
+            <div class="option"><input type="radio" name="q11" value="c" id="q11c"><label for="q11c">c) Do</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>12. Choose the correct word: <br> This is ___ book.</h3>
+            <div class="option"><input type="radio" name="q12" value="a" id="q12a"><label for="q12a">a) my</label></div>
+            <div class="option"><input type="radio" name="q12" value="b" id="q12b"><label for="q12b">b) mine</label></div>
+            <div class="option"><input type="radio" name="q12" value="c" id="q12c"><label for="q12c">c) me</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>13. What is the past participle of "write"?</h3>
+            <div class="option"><input type="radio" name="q13" value="a" id="q13a"><label for="q13a">a) wrote</label></div>
+            <div class="option"><input type="radio" name="q13" value="b" id="q13b"><label for="q13b">b) written</label></div>
+            <div class="option"><input type="radio" name="q13" value="c" id="q13c"><label for="q13c">c) writing</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>14. Complete the sentence: <br> If I ___ rich, I would travel the world.</h3>
+            <div class="option"><input type="radio" name="q14" value="a" id="q14a"><label for="q14a">a) am</label></div>
+            <div class="option"><input type="radio" name="q14" value="b" id="q14b"><label for="q14b">b) was</label></div>
+            <div class="option"><input type="radio" name="q14" value="c" id="q14c"><label for="q14c">c) were</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>15. Choose the correct word: <br> I have been here ___ three hours.</h3>
+            <div class="option"><input type="radio" name="q15" value="a" id="q15a"><label for="q15a">a) for</label></div>
+            <div class="option"><input type="radio" name="q15" value="b" id="q15b"><label for="q15b">b) since</label></div>
+            <div class="option"><input type="radio" name="q15" value="c" id="q15c"><label for="q15c">c) at</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>16. What is the correct form? <br> She ___ her homework before dinner.</h3>
+            <div class="option"><input type="radio" name="q16" value="a" id="q16a"><label for="q16a">a) finish</label></div>
+            <div class="option"><input type="radio" name="q16" value="b" id="q16b"><label for="q16b">b) finished</label></div>
+            <div class="option"><input type="radio" name="q16" value="c" id="q16c"><label for="q16c">c) finishing</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>17. Choose the correct word: <br> I don’t have ___ money.</h3>
+            <div class="option"><input type="radio" name="q17" value="a" id="q17a"><label for="q17a">a) some</label></div>
+            <div class="option"><input type="radio" name="q17" value="b" id="q17b"><label for="q17b">b) any</label></div>
+            <div class="option"><input type="radio" name="q17" value="c" id="q17c"><label for="q17c">c) no</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>18. What is the correct form? <br> By next year, I ___ English fluently.</h3>
+            <div class="option"><input type="radio" name="q18" value="a" id="q18a"><label for="q18a">a) will speak</label></div>
+            <div class="option"><input type="radio" name="q18" value="b" id="q18b"><label for="q18b">b) speak</label></div>
+            <div class="option"><input type="radio" name="q18" value="c" id="q18c"><label for="q18c">c) speaking</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>19. Choose the correct word: <br> This book is ___ than that one.</h3>
+            <div class="option"><input type="radio" name="q19" value="a" id="q19a"><label for="q19a">a) good</label></div>
+            <div class="option"><input type="radio" name="q19" value="b" id="q19b"><label for="q19b">b) better</label></div>
+            <div class="option"><input type="radio" name="q19" value="c" id="q19c"><label for="q19c">c) best</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>20. Complete the sentence: <br> I wish I ___ more time to study.</h3>
+            <div class="option"><input type="radio" name="q20" value="a" id="q20a"><label for="q20a">a) have</label></div>
+            <div class="option"><input type="radio" name="q20" value="b" id="q20b"><label for="q20b">b) had had</label></div>
+            <div class="option"><input type="radio" name="q20" value="c" id="q20c"><label for="q20c">c) had</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>21. Choose the correct word: <br> The meeting was ___ due to bad weather.</h3>
+            <div class="option"><input type="radio" name="q21" value="a" id="q21a"><label for="q21a">a) cancelled</label></div>
+            <div class="option"><input type="radio" name="q21" value="b" id="q21b"><label for="q21b">b) cancel</label></div>
+            <div class="option"><input type="radio" name="q21" value="c" id="q21c"><label for="q21c">c) cancelling</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>22. What is the correct form? <br> Neither of them ___ to the party.</h3>
+            <div class="option"><input type="radio" name="q22" value="a" id="q22a"><label for="q22a">a) come</label></div>
+            <div class="option"><input type="radio" name="q22" value="b" id="q22b"><label for="q22b">b) came</label></div>
+            <div class="option"><input type="radio" name="q22" value="c" id="q22c"><label for="q22c">c) coming</label></div>
+        </div>
+        <div class="question" data-correct="c">
+            <h3>23. Choose the correct word: <br> I look forward to ___ you soon.</h3>
+            <div class="option"><input type="radio" name="q23" value="a" id="q23a"><label for="q23a">a) see</label></div>
+            <div class="option"><input type="radio" name="q23" value="b" id="q23b"><label for="q23b">b) saw</label></div>
+            <div class="option"><input type="radio" name="q23" value="c" id="q23c"><label for="q23c">c) seeing</label></div>
+        </div>
+        <div class="question" data-correct="a">
+            <h3>24. Complete the sentence: <br> The project ___ by the team last week.</h3>
+            <div class="option"><input type="radio" name="q24" value="a" id="q24a"><label for="q24a">a) was completed</label></div>
+            <div class="option"><input type="radio" name="q24" value="b" id="q24b"><label for="q24b">b) completed</label></div>
+            <div class="option"><input type="radio" name="q24" value="c" id="q24c"><label for="q24c">c) completing</label></div>
+        </div>
+        <div class="question" data-correct="b">
+            <h3>25. Choose the correct word: <br> His decision was based on ___ evidence.</h3>
+            <div class="option"><input type="radio" name="q25" value="a" id="q25a"><label for="q25a">a) an</label></div>
+            <div class="option"><input type="radio" name="q25" value="b" id="q25b"><label for="q25b">b) no article</label></div>
+            <div class="option"><input type="radio" name="q25" value="c" id="q25c"><label for="q25c">c) the</label></div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button onclick="prevQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+        
+        <!-- Result Section -->
+        <div class="result">
+            <h2>Your Result</h2>
+            <p id="score"></p>
+            <p id="level"></p>
+            <button onclick="showReview()">Review Incorrect Answers</button>
+        </div>
+        
+        <!-- Review Section -->
+        <div class="review">
+            <h2>Incorrect Answers</h2>
+            <div id="review-content"></div>
+            <button onclick="restartTest()">Restart Test</button>
+        </div>
+        
+        <!-- Question Navigation -->
+        <div class="question-nav" id="question-nav"></div>
+    </div>
 
-      <script src="./js/english-test.js"></script>
+    <script>
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question');
+        const result = document.querySelector('.result');
+        const review = document.querySelector('.review');
+        const answers = [];
+
+        // Initialize first question and nav buttons
+        questions[0].classList.add('active');
+        updateNavButtons();
+        createQuestionNav();
+
+        function nextQuestion() {
+            saveAnswer();
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function prevQuestion() {
+            saveAnswer();
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
+            }
+        }
+
+        function showQuestion() {
+            questions.forEach((q, i) => {
+                q.classList.toggle('active', i === currentQuestion);
+            });
+            updateNavButtons();
+            updateQuestionNav();
+            loadAnswer();
+        }
+
+        function saveAnswer() {
+            const selected = questions[currentQuestion].querySelector(`input[name="q${currentQuestion + 1}"]:checked`);
+            answers[currentQuestion] = selected ? selected.value : null;
+        }
+
+        function loadAnswer() {
+            const answer = answers[currentQuestion];
+            if (answer) {
+                questions[currentQuestion].querySelector(`input[value="${answer}"]`).checked = true;
+            }
+        }
+
+        function updateNavButtons() {
+            const prevButton = document.querySelector('.navigation button:first-child');
+            const nextButton = document.querySelector('.navigation button:last-child');
+            prevButton.disabled = currentQuestion === 0;
+            nextButton.textContent = currentQuestion === questions.length - 1 ? 'Finish' : 'Next';
+        }
+
+        function createQuestionNav() {
+            const nav = document.getElementById('question-nav');
+            questions.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.textContent = i + 1;
+                btn.onclick = () => {
+                    saveAnswer();
+                    currentQuestion = i;
+                    showQuestion();
+                };
+                nav.appendChild(btn);
+            });
+            updateQuestionNav();
+        }
+
+        function updateQuestionNav() {
+            const buttons = document.querySelectorAll('.question-nav button');
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('active', i === currentQuestion);
+            });
+        }
+
+        function showResult() {
+            saveAnswer();
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (answers[i] === q.dataset.correct) score++;
+            });
+            document.getElementById('score').textContent = `You got ${score} out of ${questions.length} correct!`;
+            document.getElementById('level').textContent = `Your English level: ${getEnglishLevel(score)}`;
+            questions.forEach(q => q.classList.remove('active'));
+            result.classList.add('active');
+        }
+
+        function getEnglishLevel(score) {
+            if (score <= 5) return 'Beginner (A1)';
+            if (score <= 10) return 'Elementary (A2)';
+            if (score <= 15) return 'Intermediate (B1)';
+            if (score <= 20) return 'Upper-Intermediate (B2)';
+            return 'Advanced (C1)';
+        }
+
+        function showReview() {
+            result.classList.remove('active');
+            review.classList.add('active');
+            const content = document.getElementById('review-content');
+            content.innerHTML = '';
+            questions.forEach((q, i) => {
+                if (answers[i] !== q.dataset.correct) {
+                    const div = document.createElement('div');
+                    div.className = 'review-question';
+                    div.innerHTML = `
+                        <h3>Question ${i + 1}: ${q.querySelector('h3').textContent}</h3>
+                        <p class="incorrect">Your answer: ${getOptionText(q, answers[i])}</p>
+                        <p class="correct">Correct answer: ${getOptionText(q, q.dataset.correct)}</p>
+                    `;
+                    content.appendChild(div);
+                }
+            });
+            if (!content.innerHTML) {
+                content.innerHTML = '<p>All answers were correct!</p>';
+            }
+        }
+
+        function getOptionText(question, value) {
+            if (!value) return 'None selected';
+            const label = question.querySelector(`input[value="${value}"] + label`);
+            return label ? label.textContent : 'Unknown';
+        }
+
+        function restartTest() {
+            answers.length = 0;
+            currentQuestion = 0;
+            questions.forEach(q => {
+                q.querySelectorAll('input').forEach(input => input.checked = false);
+            });
+            review.classList.remove('active');
+            questions[0].classList.add('active');
+            updateNavButtons();
+            updateQuestionNav();
+        }
+    </script>
 </body>
 </html>
