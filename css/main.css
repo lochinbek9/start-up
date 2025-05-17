@@ -42,3 +42,19 @@ header{
     background-color: rgba(0, 0, 0, 0.5); /* Optional: Add slight background to icons for visibility */
     border-radius: 50%;
 }
+
+.disabled {
+    pointer-events: none;
+    background-color: #eee;
+  }
+  .mistake {
+    background-color: #ffc2c2;
+    border-bottom: 1px dotted red;
+  }
+  .task-box-1{
+    display: none;
+  }
+
+  .task-2-box{
+    display: none;
+  }
