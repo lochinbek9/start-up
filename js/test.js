@@ -229,9 +229,6 @@ function startReadingTest() {
 }
 
 
-
-
-
 function showResult() {
   document.getElementById('question-screen').style.display = 'none';
   document.getElementById('result-screen').style.display = 'block';
