@@ -72,7 +72,6 @@ header {
   display: none;
 }
 
-/*  */
 @media (min-width: 992px) {
   .carousel-custom {
     padding-left: 7%;
@@ -117,4 +116,14 @@ header {
   .carousel-custom {
     padding-left: 18%;
   }
+}
+
+#listening-answer {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.listening-question-text {
+  text-align: left;
 }
