@@ -804,7 +804,204 @@ making 9 <input type="text" id="listening-answer">. <br> out of wood
 cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <br>
 
                                             </p>
-                                            <button onclick="checkListening()">Submit Answer</button>
+                                            <!-- part 2 -->
+                                            <h2 class="listening-question-title">
+                                                PART 2 Questions 11-20
+                                            </h2>
+                                            <i>
+                                                Questions 11-14
+                                            </i>
+                                            <br>
+                                            <i class="">
+                                                Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.
+                                            </i>
+                                            <h3 class="listening-question-subtitle pt-3 pb-3">
+                                                Boat trip round Tasmania
+                                            </h3>
+                                            <audio id="audio-player" class="pb-3" controls>
+                                                <source src="./audio/Test 1 Part 2.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                            <form class="listening-question-text">
+                                                <style>
+                                                  .checkbox-group {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                  }
+                                                  .checkbox-group input[type="checkbox"]:disabled + label {
+                                                    opacity: 0.5;
+                                                    cursor: not-allowed;
+                                                  }
+                                                </style>
+                                              
+                                                <script>
+                                                  document.addEventListener('DOMContentLoaded', function () {
+                                                    document.querySelectorAll('.checkbox-group').forEach(group => {
+                                                      const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+                                              
+                                                      checkboxes.forEach(checkbox => {
+                                                        checkbox.addEventListener('change', () => {
+                                                          const checkedCount = group.querySelectorAll('input[type="checkbox"]:checked').length;
+                                                          checkboxes.forEach(cb => {
+                                                            if (!cb.checked) {
+                                                              cb.disabled = checkedCount >= 2;
+                                                            }
+                                                          });
+                                                        });
+                                                      });
+                                                    });
+                                                  });
+                                                </script>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>11. What is the maximum number of people who can stand on each side of the boat?</p>
+                                                  <label><input type="radio" required name="question11" value="A"> A) 9</label><br>
+                                                  <label><input type="radio" required name="question11" value="B"> B) 15</label><br>
+                                                  <label><input type="radio" required name="question11" value="C"> C) 18</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>12. What colour are the tour boats?</p>
+                                                  <label><input type="radio" required name="question12" value="A"> A) Dark Red</label><br>
+                                                  <label><input type="radio" required name="question12" value="B"> B) Jet Black</label><br>
+                                                  <label><input type="radio" required name="question12" value="C"> C) Light Green</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
+                                                  <p>15-16. Choose Two letters. A-E</p>
+                                                  <p>Which Two features of the lighthouse does Lou mention?</p>
+                                                  <label><input type="checkbox" value="A"> A) Why it was built</label><br>
+                                                  <label><input type="checkbox" value="B"> B) Who built it</label><br>
+                                                  <label><input type="checkbox" value="C"> C) How long it took to build</label><br>
+                                                  <label><input type="checkbox" value="D"> D) Who staffed it</label><br>
+                                                  <label><input type="checkbox" value="E"> E) What it was built with</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
+                                                  <p>17-18. Choose Two letters. A-E</p>
+                                                  <p>Which Two types of creature might come close to the boat?</p>
+                                                  <label><input type="checkbox" value="A"> A) Sea eagles</label><br>
+                                                  <label><input type="checkbox" value="B"> B) Fur seals</label><br>
+                                                  <label><input type="checkbox" value="C"> C) Dolphins</label><br>
+                                                  <label><input type="checkbox" value="D"> D) Whales</label><br>
+                                                  <label><input type="checkbox" value="E"> E) Penguins</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
+                                                  <p>19-20. Choose Two letters. A-E</p>
+                                                  <p>Which Two points does Lou make about the caves?</p>
+                                                  <label><input type="checkbox" value="A"> A) Only large tourist boats can visit them</label><br>
+                                                  <label><input type="checkbox" value="B"> B) The entrances to them are often blocked</label><br>
+                                                  <label><input type="checkbox" value="C"> C) It is too dangerous for individuals to go near them</label><br>
+                                                  <label><input type="checkbox" value="D"> D) Someone will explain what is inside them</label><br>
+                                                  <label><input type="checkbox" value="E"> E) They cannot be reached on foot</label>
+                                                </div>
+                                              </form>
+                                              <h2 class="listening-question-title">
+                                                PART 3 Questions 21-30
+                                            </h2>
+                                            <i>
+                                                Questions 21-26
+                                            </i>
+                                            <br>
+                                            <i class="">
+                                                Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.
+                                            </i>
+                                            <h3 class="listening-question-subtitle pt-3 pb-3">
+                                                Work experience for veterinary science students
+                                            </h3>
+                                            <audio id="audio-player" class="pb-3" controls>
+                                                <source src="./audio/Test 1 Part 3.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+
+                                            <form class="listening-question-text">
+                                                <style>
+                                                  .checkbox-group {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                  }
+                                                  .checkbox-group input[type="checkbox"]:disabled + label {
+                                                    opacity: 0.5;
+                                                    cursor: not-allowed;
+                                                  }
+                                                </style>
+                                              
+                                                <script>
+                                                  document.addEventListener('DOMContentLoaded', function () {
+                                                    document.querySelectorAll('.checkbox-group').forEach(group => {
+                                                      const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+                                              
+                                                      checkboxes.forEach(checkbox => {
+                                                        checkbox.addEventListener('change', () => {
+                                                          const checkedCount = group.querySelectorAll('input[type="checkbox"]:checked').length;
+                                                          checkboxes.forEach(cb => {
+                                                            if (!cb.checked) {
+                                                              cb.disabled = checkedCount >= 4;
+                                                            }
+                                                          });
+                                                        });
+                                                      });
+                                                    });
+                                                  });
+                                                </script>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>21. What problem did both Diana and Tim have when arranging their work experience?</p>
+                                                  <label><input type="radio" required name="question21" value="A"> A) Making initial contact with suitable farms</label><br>
+                                                  <label><input type="radio" required name="question21" value="B"> B) Organising transport to and from the farm</label><br>
+                                                  <label><input type="radio" required name="question21" value="C"> C) Finding a placement for the required length of time</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>22. Tim was pleased to be able to help</p>
+                                                  <label><input type="radio" required name="question22" value="A"> A) A lamb that had a broken leg</label><br>
+                                                  <label><input type="radio" required name="question22" value="B"> B) A sheep that was having difficulty giving birth</label><br>
+                                                  <label><input type="radio" required name="question22" value="C"> C) A newly born lamb that was having trouble feeding</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>23. Diana says the sheep on her farm</p>
+                                                  <label><input type="radio" required name="question23" value="A"> A) Were of various different varieties</label><br>
+                                                  <label><input type="radio" required name="question23" value="B"> B) Were mainly reared for their meat</label><br>
+                                                  <label><input type="radio" required name="question23" value="C"> C) Had better quality wool than sheep on the hills</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>24. What did the students learn about adding supplements to chicken feed?</p>
+                                                  <label><input type="radio" required name="question24" value="A"> A) These should only be given if specially needed</label><br>
+                                                  <label><input type="radio" required name="question24" value="B"> B) It is worth paying extra for the most effective ones</label><br>
+                                                  <label><input type="radio" required name="question24" value="C"> C) The amount given at one time should be limited</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>25. What happened when Diana was working with dairy cows?</p>
+                                                  <label><input type="radio" required name="question25" value="A"> A) She identified some cows incorrectly</label><br>
+                                                  <label><input type="radio" required name="question25" value="B"> B) She accidentally threw some milk away</label><br>
+                                                  <label><input type="radio" required name="question25" value="C"> C) She made a mistake when storing milk</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;">
+                                                  <p>26. What did both farmers mention about vets and farming?</p>
+                                                  <label><input type="radio" required name="question26" value="A"> A) Vets are failing to cope with some aspects of animal health</label><br>
+                                                  <label><input type="radio" required name="question26" value="B"> B) There needs to be a fundamental change in the training of vets</label><br>
+                                                  <label><input type="radio" required name="question26" value="C"> C) Some jobs could be done by the farmer rather than by a vet</label>
+                                                </div>
+                                              
+                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
+                                                  <p>27-30. Choose FOUR answers from the box and write the correct letter, A–F, next to questions 27–30.</p>
+                                                  <label><input type="checkbox" value="A"> A) Tim found this easier than expected</label><br>
+                                                  <label><input type="checkbox" value="B"> B) Tim thought this was not very clearly organised</label><br>
+                                                  <label><input type="checkbox" value="C"> C) Diana may do some further study on this</label><br>
+                                                  <label><input type="checkbox" value="D"> D) They both found the reading required for this was difficult</label><br>
+                                                  <label><input type="checkbox" value="E"> E) Tim was shocked at something he learned on this module</label><br>
+                                                  <label><input type="checkbox" value="F"> F) They were both surprised how little is known about some aspects of this</label>
+                                                </div>
+                                              
+                                              </form>
+                                              
+
+                                              <button onclick="checkListening()">Submit Answer</button>
                                             <button onclick="goHome()">Back to Menu</button>
                                         </div>
 
