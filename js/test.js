@@ -243,3 +243,11 @@ function goBack() {
   document.getElementById('question-screen').style.display = 'none';
   document.getElementById('test-screen').style.display = 'block';
 }
+
+function closeWritingTest(){
+  const testScreen1 = document.querySelector("#task1-section")
+  const testScreen2 = document.querySelector("#task1-section-2")
+
+  testScreen1.style.display = "none"
+  testScreen2.style.display = "none"
+}

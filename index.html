@@ -24,7 +24,8 @@
     <nav class="navbar navbar-expand-lg bg-light fixed-top" id="mainNav">
         <div class="container">
             <a class="./index.html" href="#page-top">
-                <img src="./assets/img/logo.png" width="200" height="90" alt=""></a>
+                <img src="./assets/img/logo.png" width="200" height="90"  alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -142,7 +143,7 @@
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Imtihonlar</h2>
                 <h3 class="section-subheading text-muted">Til bilish darajangizni aniqlang</h3>
-                <h1>Hfjewko]j</h1>
+              
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
@@ -726,20 +727,21 @@
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                        alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal">
+                    <img src="assets/img/close-icon.svg" alt="Close modal" />
+                    </div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
                                 <div id="start-screen" class="mt-10 mb-5">
-
+<!-- 
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                         type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Orqaga
-                                    </button>
+                                    </button> -->
                                 </div>
 
                                 <div id="test-screen" class="mt-5" style="display:none;">
@@ -1045,6 +1047,7 @@ cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <b
                                             <button id="submitBtn" class="btn btn-success mt-3">Submit</button>
     
                                             <div id="result" class="mt-4"></div>
+                                         
                                         </div>
                                     </section>
 
@@ -1092,8 +1095,13 @@ cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <b
         
                                                 <div id="result-2" class="mt-4"></div>
                                             </div>
+                                            <br>
+                                            <button onclick="goBack()">Orqaga</button>
                                     </section>
+                                      
                                 </div>
+
+                                
 
                                 </div>
 
@@ -1114,7 +1122,9 @@ cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <b
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-bs-dismiss="modal">
+                   <button onclick="closeWritingTest()">
                     <img src="assets/img/close-icon.svg" alt="Close modal" />
+                   </button>
                 </div>
                 <div class="container">
                     <div class="row justify-content-center">
