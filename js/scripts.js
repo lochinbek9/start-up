@@ -71,6 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener("resize", function () {
-    carouselInstance.cycle(); // Karuselni qayta ishga tushirish
+    carouselInstance.cycle();
   });
 });
