@@ -74,3 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselInstance.cycle();
   });
 });
+
+function readingBtn(){
+  document.querySelector(".reading-btn").style.display = "none"
+}

@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg bg-light fixed-top" id="mainNav">
         <div class="container">
             <a class="./index.html" href="#page-top">
-                <img src="./assets/img/logo.png" width="200" height="90"  alt="">
+                <img src="./assets/img/logo.png" style="width: 150px;" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -617,24 +617,27 @@
             <div class="row align-items-center">
                 <div class="col-md-3 col-sm-6 my-3">
                     <a href="https://yoshlar-texnoparki.uz/">
-                        <img class="d-block mx-auto" src="assets/img/partners/techno-logo.png" width="200" height="60"
+                        <img class="d-block mx-auto" src="assets/img/partners/techno-logo.png" width="200px" height="70px"
                             alt="Texnopar Logo" aria-label="Texnopar Logo" />
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 my-3">
                     <a href="https://www.instagram.com/robocode.uz/">
-                        <img class="d-block mx-auto" src="assets/img/partners/robocode-logo.jpg" width="200" alt="..."
+                        <img class="d-block mx-auto" src="assets/img/partners/robocode-logo.jpg" width="200" style="width: 200px;"  alt="..."
                             aria-label="Google Logo" />
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 my-3">
                     <a href="https://book.uz/"><img class=" d-block mx-auto" src="assets/img/partners/book-uz.svg"
-                            alt="..." aria-label="Facebook Logo" /></a>
+                            alt="..." aria-label="Facebook Logo" style="width: 200px; height: 70px;" />
+                    </a>
                 </div>
                 <div class="col-md-3 col-sm-6 my-3">
-                    <a href="https://innovation.gov.uz/"><img class=" d-block mx-auto"
+                    <a href="https://innovation.gov.uz/">
+                        <img class=" d-block mx-auto"
                             src="assets/img/partners/inno.png" width="200" height="100" alt="..."
-                            aria-label="IBM Logo" /></a>
+                            aria-label="IBM Logo" style="width: 200px;" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -736,12 +739,12 @@
                             <div class="modal-body">
                                 <!-- Project details-->
                                 <div id="start-screen" class="mt-10 mb-5">
-<!-- 
+
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                         type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Orqaga
-                                    </button> -->
+                                    </button> 
                                 </div>
 
                                 <div id="test-screen" class="mt-5" style="display:none;">
@@ -749,24 +752,11 @@
 
                                     <button class="btn btn-primary btn-xl text-uppercase"
                                         onclick="startWritingTest()">Writing Test</button>
-                                    <button class="btn btn-primary btn-xl text-uppercase"
-                                        onclick="">Reading Test</button>
+                                    <button class="btn btn-primary btn-xl text-uppercase reading-btn">
+                                    <a href="./reading.html" style="color: #fff; text-decoration: none;">Reading Test</a>
+                                    </button>
 
-                                    <!-- <div class="speaking">
-                                        <div id="speaking-menu">
-                                            <button class="btn btn-primary btn-xl text-uppercase m-2"
-                                                onclick="startListening()">Listening Test</button>
-                                            <button class="btn btn-primary btn-xl text-uppercase"
-                                                onclick="startSpeaking()">Speaking Test</button>
-                                            <br>
-                                            <br>
-                                            <button class="btn btn-primary btn-xl text-uppercase"
-                                                data-bs-dismiss="modal" onclick="goBack() ">
-                                                Orqaga &larr;
-                                            </button>
-
-
-                                        </div>
+                               
 
                                         <div id="listening" style="display:none;">
                                             <h2 class="mt-5 mb-5">Listen and Write</h2>
@@ -803,7 +793,7 @@ suitable for 8 <input type="text" id="listening-answer">. <br> to participate in
 making 9 <input type="text" id="listening-answer">. <br> out of wood
 17th, from 10 a.m. to 3 p.m.
 cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <br>
-
+ --
                                             </p>
                                             <!-- part 2 -->
                                             <h2 class="listening-question-title">
@@ -1013,7 +1003,7 @@ cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <b
                                             <button onclick="goHome()">Back to Menu</button>
                                         </div>
 
-                                    </div> -->
+                                    </div>
 
                                 </div>
 
@@ -1122,18 +1112,20 @@ cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <b
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-bs-dismiss="modal">
-                   <button onclick="closeWritingTest()">
                     <img src="assets/img/close-icon.svg" alt="Close modal" />
-                   </button>
                 </div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
-                                <button class="btn btn-primary btn-xl text-uppercase mb-3">TOPIK 1</button>
+                                <button class="btn btn-primary btn-xl text-uppercase mb-3">SPEAKING</button>
 
-                                <button class="btn btn-primary btn-xl text-uppercase mb-3">TOPIK 2</button>
+                                <button class="btn btn-primary btn-xl text-uppercase mb-3">READING</button>
+                                <br>
+                                <button class="btn btn-primary btn-xl text-uppercase mb-3">WRITING</button>
+
+                                <button class="btn btn-primary btn-xl text-uppercase mb-3">LISTENING</button>
                                 <br>
 
                                 <br>
