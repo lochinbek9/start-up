@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-<<<<<<< HEAD
+
 function readingBtn(){
   document.querySelector(".reading-btn").style.display = "none"
 }
-=======
+
 //
 
 document.addEventListener("DOMContentLoaded", function () {
