@@ -12,26 +12,25 @@ const writingQuestions = [
 
 //START-WRITING-TEST-1--------------------------------------------------------
 
-
 const maxWords = 150;
-const taskTextarea = document.getElementById('task1Textarea');
-const wordCount = document.getElementById('task1WordCount');
-const resultDiv = document.getElementById('result');
-const submitBtn = document.getElementById('submitBtn');
-const timerDisplay = document.getElementById('timer');
+const taskTextarea = document.getElementById("task1Textarea");
+const wordCount = document.getElementById("task1WordCount");
+const resultDiv = document.getElementById("result");
+const submitBtn = document.getElementById("submitBtn");
+const timerDisplay = document.getElementById("timer");
 
 // So'z sanash
-taskTextarea.addEventListener('input', () => {
+taskTextarea.addEventListener("input", () => {
   const words = taskTextarea.value.trim().split(/\s+/).filter(Boolean);
   const remaining = maxWords - words.length;
 
   if (words.length > maxWords) {
-    taskTextarea.value = words.slice(0, maxWords).join(' ');
+    taskTextarea.value = words.slice(0, maxWords).join(" ");
     wordCount.textContent = `❗ Faqat ${maxWords} ta so‘zgacha ruxsat beriladi.`;
-    wordCount.style.color = 'red';
+    wordCount.style.color = "red";
   } else {
     wordCount.textContent = `📌 So‘zlar soni: ${words.length} / ${maxWords} | Qolgan: ${remaining} ta so‘z`;
-    wordCount.style.color = 'gray';
+    wordCount.style.color = "gray";
   }
 });
 
@@ -40,7 +39,7 @@ const commonMistakes = ["is", "are", "a", "the", "of", "in", "that"];
 
 function showMistakes(text) {
   const words = text.split(/\s+/);
-  const highlighted = words.map(word => {
+  const highlighted = words.map((word) => {
     return commonMistakes.includes(word.toLowerCase())
       ? `<span class="mistake">${word}</span>`
       : word;
@@ -67,14 +66,14 @@ function submitTask() {
   submitBtn.disabled = true;
 }
 
-submitBtn.addEventListener('click', submitTask);
+submitBtn.addEventListener("click", submitTask);
 
 // Taymer: 20 daqiqa
 function startTimeFunc() {
   let time = 20 * 60;
   const timer = setInterval(() => {
-    const minutes = String(Math.floor(time / 60)).padStart(2, '0');
-    const seconds = String(time % 60).padStart(2, '0');
+    const minutes = String(Math.floor(time / 60)).padStart(2, "0");
+    const seconds = String(time % 60).padStart(2, "0");
     timerDisplay.textContent = `⏳ ${minutes}:${seconds}`;
     time--;
 
@@ -90,38 +89,33 @@ const startTaskBtn1 = document.querySelector(".start-task-1-btn");
 const taskBox1 = document.querySelector(".task-box-1");
 
 startTaskBtn1.addEventListener("click", (e) => {
-  taskBox1.style.display = "block"
-  startTimeFunc()
-})
-
+  taskBox1.style.display = "block";
+  startTimeFunc();
+});
 
 // END-WRITING-TEST-1-----------------------------------------------------------
-
-
-
-
 
 // START-WRITING-TASK-2-----------------------------------------------------
 
 const maxWords2 = 250;
-const taskTextarea2 = document.getElementById('task1Textarea-2');
-const wordCount2 = document.getElementById('task1WordCount-2');
-const resultDiv2 = document.getElementById('result-2');
-const submitBtn2 = document.getElementById('submitBtn-2');
-const timerDisplay2 = document.getElementById('timer-2');
+const taskTextarea2 = document.getElementById("task1Textarea-2");
+const wordCount2 = document.getElementById("task1WordCount-2");
+const resultDiv2 = document.getElementById("result-2");
+const submitBtn2 = document.getElementById("submitBtn-2");
+const timerDisplay2 = document.getElementById("timer-2");
 
 // So'z sanash
-taskTextarea2.addEventListener('input', () => {
+taskTextarea2.addEventListener("input", () => {
   const words2 = taskTextarea2.value.trim().split(/\s+/).filter(Boolean);
   const remaining2 = maxWords2 - words2.length;
 
   if (words2.length > maxWords2) {
-    taskTextarea2.value = words2.slice(0, maxWords2).join(' ');
+    taskTextarea2.value = words2.slice(0, maxWords2).join(" ");
     wordCount2.textContent = `❗ Faqat ${maxWords} ta so‘zgacha ruxsat beriladi.`;
-    wordCount2.style.color = 'red';
+    wordCount2.style.color = "red";
   } else {
     wordCount2.textContent = `📌 So‘zlar soni: ${words2.length} / ${maxWords2} | Qolgan: ${remaining2} ta so‘z`;
-    wordCount2.style.color = 'gray';
+    wordCount2.style.color = "gray";
   }
 });
 
@@ -130,7 +124,7 @@ const commonMistakes2 = ["is", "are", "a", "the", "of", "in", "that"];
 
 function showMistakes2(text) {
   const words2 = text.split(/\s+/);
-  const highlighted2 = words2.map(word => {
+  const highlighted2 = words2.map((word) => {
     return commonMistakes2.includes(word.toLowerCase())
       ? `<span class="mistake">${word}</span>`
       : word;
@@ -157,16 +151,14 @@ function submitTask2() {
   submitBtn2.disabled = true;
 }
 
-submitBtn2.addEventListener('click', submitTask2);
-
-
+submitBtn2.addEventListener("click", submitTask2);
 
 // Taymer: 20 daqiqa
 function startTestTast2() {
   let time2 = 40 * 60;
   const timer2 = setInterval(() => {
-    const minutes2 = String(Math.floor(time2 / 60)).padStart(2, '0');
-    const seconds2 = String(time2 % 60).padStart(2, '0');
+    const minutes2 = String(Math.floor(time2 / 60)).padStart(2, "0");
+    const seconds2 = String(time2 % 60).padStart(2, "0");
     timerDisplay2.textContent = `⏳ ${minutes2}:${seconds2}`;
     time2--;
 
@@ -183,20 +175,25 @@ const startTaskBtn2 = document.querySelector(".task-2-start-btn");
 const taskbox2 = document.querySelector(".task-2-box");
 
 startTaskBtn2.addEventListener("click", () => {
-  taskbox2.style.display = "block"
-})
+  taskbox2.style.display = "block";
+});
 // END-WRITING-TASK-2-----------------------------------------------------------
 
-
-
-
 const readingQuestions = [
-  { question: "Read the passage and answer the questions.", options: ["True", "False"], correct: "True" },
+  {
+    question: "Read the passage and answer the questions.",
+    options: ["True", "False"],
+    correct: "True",
+  },
   // Add more questions for reading
 ];
 
 const listeningQuestions = [
-  { question: "Listen to the audio and answer the question.", options: ["Option A", "Option B"], correct: "Option A" },
+  {
+    question: "Listen to the audio and answer the question.",
+    options: ["Option A", "Option B"],
+    correct: "Option A",
+  },
   // Add more questions for listening
 ];
 
@@ -205,17 +202,15 @@ let currentTest = "";
 let score = 0;
 
 function startTest() {
-  document.getElementById('start-screen').style.display = 'none';
-  document.getElementById('test-screen').style.display = 'block';
+  document.getElementById("start-screen").style.display = "none";
+  document.getElementById("test-screen").style.display = "block";
 }
-
 
 function startQuestionnaire() {
   currentQuestionIndex = 0;
   score = 0;
-  document.getElementById('test-screen').style.display = 'none';
-  document.getElementById('question-screen').style.display = 'block';
-
+  document.getElementById("test-screen").style.display = "none";
+  document.getElementById("question-screen").style.display = "block";
 }
 
 function startWritingTest() {
@@ -228,11 +223,15 @@ function startReadingTest() {
   startQuestionnaire(readingQuestions);
 }
 
+function startListeningTest() {
+  document.getElementById("test-screen").style.display = "none";
+  document.getElementById("listening").style.display = "block";
+}
 
 function showResult() {
-  document.getElementById('question-screen').style.display = 'none';
-  document.getElementById('result-screen').style.display = 'block';
-  document.getElementById('result').innerText = `Your score is: ${score}`;
+  document.getElementById("question-screen").style.display = "none";
+  document.getElementById("result-screen").style.display = "block";
+  document.getElementById("result").innerText = `Your score is: ${score}`;
 }
 
 function restartTest() {
@@ -240,14 +239,14 @@ function restartTest() {
 }
 
 function goBack() {
-  document.getElementById('question-screen').style.display = 'none';
-  document.getElementById('test-screen').style.display = 'block';
+  document.getElementById("question-screen").style.display = "none";
+  document.getElementById("test-screen").style.display = "block";
 }
 
-function closeWritingTest(){
-  const testScreen1 = document.querySelector("#task1-section")
-  const testScreen2 = document.querySelector("#task1-section-2")
+function closeWritingTest() {
+  const testScreen1 = document.querySelector("#task1-section");
+  const testScreen2 = document.querySelector("#task1-section-2");
 
-  testScreen1.style.display = "none"
-  testScreen2.style.display = "none"
+  testScreen1.style.display = "none";
+  testScreen2.style.display = "none";
 }
