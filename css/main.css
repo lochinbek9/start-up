@@ -122,8 +122,14 @@ input[type="text"] {
   border: none;
   outline: none;
   border-bottom: 1px solid #000;
+  border-radius: 0%;
 }
 
 .listening-question-text {
   text-align: left;
+}
+
+ul,
+ol {
+  list-style: none;
 }
