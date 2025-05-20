@@ -291,19 +291,19 @@
         <!-- Question Navigation -->
         <div class="question-nav" id="question-nav"></div>
     </div>
-
+    
     <script>
         let currentQuestion = 0;
         const questions = document.querySelectorAll('.question');
         const result = document.querySelector('.result');
         const review = document.querySelector('.review');
         const answers = [];
-
+        
         // Initialize first question and nav buttons
         questions[0].classList.add('active');
         updateNavButtons();
         createQuestionNav();
-
+        
         function nextQuestion() {
             saveAnswer();
             if (currentQuestion < questions.length - 1) {
@@ -313,7 +313,7 @@
                 showResult();
             }
         }
-
+        
         function prevQuestion() {
             saveAnswer();
             if (currentQuestion > 0) {
@@ -321,7 +321,7 @@
                 showQuestion();
             }
         }
-
+        
         function showQuestion() {
             questions.forEach((q, i) => {
                 q.classList.toggle('active', i === currentQuestion);
@@ -330,26 +330,26 @@
             updateQuestionNav();
             loadAnswer();
         }
-
+        
         function saveAnswer() {
             const selected = questions[currentQuestion].querySelector(`input[name="q${currentQuestion + 1}"]:checked`);
             answers[currentQuestion] = selected ? selected.value : null;
         }
-
+        
         function loadAnswer() {
             const answer = answers[currentQuestion];
             if (answer) {
                 questions[currentQuestion].querySelector(`input[value="${answer}"]`).checked = true;
             }
         }
-
+        
         function updateNavButtons() {
             const prevButton = document.querySelector('.navigation button:first-child');
             const nextButton = document.querySelector('.navigation button:last-child');
             prevButton.disabled = currentQuestion === 0;
             nextButton.textContent = currentQuestion === questions.length - 1 ? 'Finish' : 'Next';
         }
-
+        
         function createQuestionNav() {
             const nav = document.getElementById('question-nav');
             questions.forEach((_, i) => {
@@ -364,14 +364,14 @@
             });
             updateQuestionNav();
         }
-
+        
         function updateQuestionNav() {
             const buttons = document.querySelectorAll('.question-nav button');
             buttons.forEach((btn, i) => {
                 btn.classList.toggle('active', i === currentQuestion);
             });
         }
-
+        
         function showResult() {
             saveAnswer();
             let score = 0;
@@ -383,7 +383,7 @@
             questions.forEach(q => q.classList.remove('active'));
             result.classList.add('active');
         }
-
+        
         function getEnglishLevel(score) {
             if (score <= 5) return 'Beginner (A1)';
             if (score <= 10) return 'Elementary (A2)';
@@ -391,7 +391,7 @@
             if (score <= 20) return 'Upper-Intermediate (B2)';
             return 'Advanced (C1)';
         }
-
+        
         function showReview() {
             result.classList.remove('active');
             review.classList.add('active');
@@ -413,13 +413,13 @@
                 content.innerHTML = '<p>All answers were correct!</p>';
             }
         }
-
+        
         function getOptionText(question, value) {
             if (!value) return 'None selected';
             const label = question.querySelector(`input[value="${value}"] + label`);
             return label ? label.textContent : 'Unknown';
         }
-
+        
         function restartTest() {
             answers.length = 0;
             currentQuestion = 0;
