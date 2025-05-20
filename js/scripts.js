@@ -75,13 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-<<<<<<< HEAD
-function readingBtn(){
-  document.querySelector(".reading-btn").style.display = "none"
-}
-=======
-//
-
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".checkbox-group").forEach((group) => {
     const checkboxes = group.querySelectorAll('input[type="checkbox"]');
@@ -298,6 +291,5 @@ function checkAnswers() {
 }
 
 function goHome() {
-  window.location.href = "menu.html"; // Adjust as needed
+  window.location.href = "index.html";
 }
->>>>>>> 54f3079 (listening dynamic)
