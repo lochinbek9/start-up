@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg bg-light fixed-top" id="mainNav">
         <div class="container">
             <a class="./index.html" href="#page-top">
-                <img src="./assets/img/logo.png" style="width: 150px;" alt="">
+               <!-- <img src="./assets/img/logo.png" style="width: 150px;" alt=""> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -756,309 +756,437 @@
                                     <a href="./reading.html" style="color: #fff; text-decoration: none;">Reading Test</a>
                                     </button>
 
-                               
 
-                                        <div id="listening" style="display:none;">
-                                            <h2 class="mt-5 mb-5">Listen and Write</h2>
-                                            <h2 class="listening-question-title">
-                                                PART 1 Questions 1-10
-                                            </h2>
-                                            <i>Complete the notes below.
-                                            </i>
-                                            <p class="listening-question-subtitle pt-3">
-                                                Write <strong>ONE WORD AND/OR A NUMBER</strong> for each answer.
-                                            </p>
-                                            <h3 class="listening-question-subtitle pt-3 pb-3">
-                                                Buckworth Conservation Group
-                                            </h3>
-                                            <audio id="audio-player" class="pb-3" controls>
-                                                <source src="./audio/Test 1 Part 1.mp3" type="audio/mpeg">
-                                                Your browser does not support the audio element.
-                                            </audio>
-                                            <form class="listening-question-text">
-                                                <strong>Regular activities
-                                                </strong> <br><br>
-                                                Beach
-making sure the beach does not have 1 <input type="text" id="listening-answer">. <br> on it
-no 2 <input type="text" id="listening-answer">. <br>
-Nature reserve
-maintaining paths
-nesting boxes for birds installed
-next task is taking action to attract 3 <input type="text" id="listening-answer">. <br> to the place
-identifying types of 4 <input type="text" id="listening-answer">. <br>
-building a new 5 <input type="text" id="listening-answer">. <br>
-Forthcoming events
-Saturday
-meet at Dunsmore Beach car park
-walk across the sands and reach the 6 <input type="text" id="listening-answer">.<br>
-take a picnic
-wear appropriate 7 <input type="text" id="listening-answer">. <br>
-Woodwork session
-suitable for 8 <input type="text" id="listening-answer">. <br> to participate in
-making 9 <input type="text" id="listening-answer">. <br> out of wood
-17th, from 10 a.m. to 3 p.m.
-cost of session (no camping): 10 $ <input type="text" id="listening-answer">. <br>
-
-                                          </form>
-                                            <!-- part 2 -->
-                                            <h2 class="listening-question-title mt-5">
-                                                PART 2 Questions 11-20
-                                            </h2>
-                                            <i>
-                                                Questions 11-14
-                                            </i>
-                                            <br>
-                                            <i class="">
-                                                Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.
-                                            </i>
-                                            <h3 class="listening-question-subtitle pt-3 pb-3">
-                                                Boat trip round Tasmania
-                                            </h3>
-                                            <audio id="audio-player" class="pb-3" controls>
-                                                <source src="./audio/Test 1 Part 2.mp3" type="audio/mpeg">
-                                                Your browser does not support the audio element.
-                                            </audio>
-                                            <form class="listening-question-text">
-                                                <style>
-                                                  .checkbox-group {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                  }
-                                                  .checkbox-group input[type="checkbox"]:disabled + label {
-                                                    opacity: 0.5;
-                                                    cursor: not-allowed;
-                                                  }
-                                                </style>
-                                              
-                                                <script>
-                                                  document.addEventListener('DOMContentLoaded', function () {
-                                                    document.querySelectorAll('.checkbox-group').forEach(group => {
-                                                      const checkboxes = group.querySelectorAll('input[type="checkbox"]');
-                                              
-                                                      checkboxes.forEach(checkbox => {
-                                                        checkbox.addEventListener('change', () => {
-                                                          const checkedCount = group.querySelectorAll('input[type="checkbox"]:checked').length;
-                                                          checkboxes.forEach(cb => {
-                                                            if (!cb.checked) {
-                                                              cb.disabled = checkedCount >= 2;
-                                                            }
-                                                          });
-                                                        });
-                                                      });
-                                                    });
-                                                  });
-                                                </script>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>11. What is the maximum number of people who can stand on each side of the boat?</p>
-                                                  <label><input type="radio" required name="question11" value="A"> A) 9</label><br>
-                                                  <label><input type="radio" required name="question11" value="B"> B) 15</label><br>
-                                                  <label><input type="radio" required name="question11" value="C"> C) 18</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>12. What colour are the tour boats?</p>
-                                                  <label><input type="radio" required name="question12" value="A"> A) Dark Red</label><br>
-                                                  <label><input type="radio" required name="question12" value="B"> B) Jet Black</label><br>
-                                                  <label><input type="radio" required name="question12" value="C"> C) Light Green</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
-                                                  <strong>15-16. Choose Two letters. A-E</strong>
-                                                  <p class="mt-5">Which Two features of the lighthouse does Lou mention?</p>
-                                                  <label><input type="checkbox" value="A"> A) Why it was built</label><br>
-                                                  <label><input type="checkbox" value="B"> B) Who built it</label><br>
-                                                  <label><input type="checkbox" value="C"> C) How long it took to build</label><br>
-                                                  <label><input type="checkbox" value="D"> D) Who staffed it</label><br>
-                                                  <label><input type="checkbox" value="E"> E) What it was built with</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
-                                                  <strong>17-18. Choose Two letters. A-E</strong>
-                                                  <p class="mt-5">Which Two types of creature might come close to the boat?</p>
-                                                  <label><input type="checkbox" value="A"> A) Sea eagles</label><br>
-                                                  <label><input type="checkbox" value="B"> B) Fur seals</label><br>
-                                                  <label><input type="checkbox" value="C"> C) Dolphins</label><br>
-                                                  <label><input type="checkbox" value="D"> D) Whales</label><br>
-                                                  <label><input type="checkbox" value="E"> E) Penguins</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
-                                                  <strong>19-20. Choose Two letters. A-E</strong>
-                                                  <p class="mt-5">Which Two points does Lou make about the caves?</p>
-                                                  <label><input type="checkbox" value="A"> A) Only large tourist boats can visit them</label><br>
-                                                  <label><input type="checkbox" value="B"> B) The entrances to them are often blocked</label><br>
-                                                  <label><input type="checkbox" value="C"> C) It is too dangerous for individuals to go near them</label><br>
-                                                  <label><input type="checkbox" value="D"> D) Someone will explain what is inside them</label><br>
-                                                  <label><input type="checkbox" value="E"> E) They cannot be reached on foot</label>
-                                                </div>
-                                              </form>
-                                              <h2 class="listening-question-title mt-5">
-                                                PART 3 Questions 21-30
-                                            </h2>
-                                            <i>
-                                                Questions 21-26
-                                            </i>
-                                            <br>
-                                            <i class="">
-                                                Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.
-                                            </i>
-                                            <h3 class="listening-question-subtitle pt-3 pb-3">
-                                                Work experience for veterinary science students
-                                            </h3>
-                                            <audio id="audio-player" class="pb-3" controls>
-                                                <source src="./audio/Test 1 Part 3.mp3" type="audio/mpeg">
-                                                Your browser does not support the audio element.
-                                            </audio>
-
-                                            <form class="listening-question-text">
-                                                <style>
-                                                  .checkbox-group {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                  }
-                                                  .checkbox-group input[type="checkbox"]:disabled + label {
-                                                    opacity: 0.5;
-                                                    cursor: not-allowed;
-                                                  }
-                                                </style>
-                                              
-                                                <script>
-                                                  document.addEventListener('DOMContentLoaded', function () {
-                                                    document.querySelectorAll('.checkbox-group').forEach(group => {
-                                                      const checkboxes = group.querySelectorAll('input[type="checkbox"]');
-                                              
-                                                      checkboxes.forEach(checkbox => {
-                                                        checkbox.addEventListener('change', () => {
-                                                          const checkedCount = group.querySelectorAll('input[type="checkbox"]:checked').length;
-                                                          checkboxes.forEach(cb => {
-                                                            if (!cb.checked) {
-                                                              cb.disabled = checkedCount >= 2;
-                                                            }
-                                                          });
-                                                        });
-                                                      });
-                                                    });
-                                                  });
-                                                </script>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>21. What problem did both Diana and Tim have when arranging their work experience?</p>
-                                                  <label><input type="radio" required name="question21" value="A"> A) Making initial contact with suitable farms</label><br>
-                                                  <label><input type="radio" required name="question21" value="B"> B) Organising transport to and from the farm</label><br>
-                                                  <label><input type="radio" required name="question21" value="C"> C) Finding a placement for the required length of time</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>22. Tim was pleased to be able to help</p>
-                                                  <label><input type="radio" required name="question22" value="A"> A) A lamb that had a broken leg</label><br>
-                                                  <label><input type="radio" required name="question22" value="B"> B) A sheep that was having difficulty giving birth</label><br>
-                                                  <label><input type="radio" required name="question22" value="C"> C) A newly born lamb that was having trouble feeding</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>23. Diana says the sheep on her farm</p>
-                                                  <label><input type="radio" required name="question23" value="A"> A) Were of various different varieties</label><br>
-                                                  <label><input type="radio" required name="question23" value="B"> B) Were mainly reared for their meat</label><br>
-                                                  <label><input type="radio" required name="question23" value="C"> C) Had better quality wool than sheep on the hills</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>24. What did the students learn about adding supplements to chicken feed?</p>
-                                                  <label><input type="radio" required name="question24" value="A"> A) These should only be given if specially needed</label><br>
-                                                  <label><input type="radio" required name="question24" value="B"> B) It is worth paying extra for the most effective ones</label><br>
-                                                  <label><input type="radio" required name="question24" value="C"> C) The amount given at one time should be limited</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>25. What happened when Diana was working with dairy cows?</p>
-                                                  <label><input type="radio" required name="question25" value="A"> A) She identified some cows incorrectly</label><br>
-                                                  <label><input type="radio" required name="question25" value="B"> B) She accidentally threw some milk away</label><br>
-                                                  <label><input type="radio" required name="question25" value="C"> C) She made a mistake when storing milk</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p>26. What did both farmers mention about vets and farming?</p>
-                                                  <label><input type="radio" required name="question26" value="A"> A) Vets are failing to cope with some aspects of animal health</label><br>
-                                                  <label><input type="radio" required name="question26" value="B"> B) There needs to be a fundamental change in the training of vets</label><br>
-                                                  <label><input type="radio" required name="question26" value="C"> C) Some jobs could be done by the farmer rather than by a vet</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;" class="checkbox-group">
-                                                  <strong class="display-block mt-5 mb-5">27-30. Choose FOUR answers from the box and write the correct letter, A–F, next to questions 27–30.</strong>
-                                                  <label><input type="checkbox" value="A"> A) Tim found this easier than expected</label><br>
-                                                  <label><input type="checkbox" value="B"> B) Tim thought this was not very clearly organised</label><br>
-                                                  <label><input type="checkbox" value="C"> C) Diana may do some further study on this</label><br>
-                                                  <label><input type="checkbox" value="D"> D) They both found the reading required for this was difficult</label><br>
-                                                  <label><input type="checkbox" value="E"> E) Tim was shocked at something he learned on this module</label><br>
-                                                  <label><input type="checkbox" value="F"> F) They were both surprised how little is known about some aspects of this</label>
-                                                </div>
-                                              
-                                                <div style="margin-bottom: 1rem;">
-                                                  <p><strong>Modules on Veterinary Science course</strong></p>
-                                                  <label>27 Medical terminology <input type="text" name="module27"></label><br> <br>
-                                                  <label>28 Diet and nutrition <input type="text" name="module28"></label><br>
-                                                  <br>
-                                                  <label>29 Animal disease <input type="text" name="module29"></label><br>
-                                                  <br>
-                                                  <label>30 Wildlife medication <input type="text" name="module30"></label>
-                                                </div>
-                                              </form>
-                                              <h2 class="listening-question-title mt-5">
-                                                PART 4 Questions 31-40
-                                            </h2>
-                                            <i>
-                                                Complete the notes below.
-                                            </i>
-                                            <br>
-                                            <br>
-                                            <i>
-                                                Write <strong>ONE WORD ONLY</strong> for each answer.
-                                            </i>
-                                            <h3 class="listening-question-subtitle pt-3 pb-3">
-                                                Labyrinths
-                                            </h3>
-                                            <audio id="audio-player" class="pb-3" controls>
-                                                <source src="./audio/Test 1 Part 4.mp3" type="audio/mpeg">
-                                                Your browser does not support the audio element.
-                                            </audio>
-
-                                            <form class="listening-question-text">
-                                                <strong>Definition  </strong> <br><br>
-a winding spiral path leading to a central area
-
-<br> <br><strong>Labyrinths compared with mazes  
-</strong> <br><br>
-Mazes are a type of <input type="text" class="inline-input">  
-– <input type="text" class="inline-input"> is needed to navigate through a maze  
-– the word ‘maze’ is derived from a word meaning a feeling of <input type="text" class="inline-input">  
-
-Labyrinths represent a journey through life  
-– they have frequently been used in <input type="text" class="inline-input"> and prayer  
-
-<br><br><strong>Early examples of the labyrinth spiral  
-</strong> <br><br>
-Ancient carvings on <input type="text" class="inline-input"> have been found across many cultures  
-The Pima, a Native American tribe, wove the symbol on baskets  
-Ancient Greeks used the symbol on <input type="text" class="inline-input">  
-
-<br><br><strong>Walking labyrinths  
-</strong> <br><br>
-The largest surviving example of a turf labyrinth once had a big <input type="text" class="inline-input"> at its centre  
-
-<br><br><strong>Labyrinths nowadays  
-</strong><br><br>
-Believed to have a beneficial impact on mental and physical health, e.g., walking a maze can reduce a person’s <input type="text" class="inline-input"> rate  
-Used in medical and health and fitness settings and also prisons  
-Popular with patients, visitors and staff in hospitals  
-– patients who can’t walk can use ‘finger labyrinths’ made from <input type="text" class="inline-input">  
-– research has shown that Alzheimer’s sufferers experience less <input type="text" class="inline-input">
-
-                                            </form>
-
-                                              <button onclick="checkListening()">Submit Answer</button>
-                                            <button onclick="goHome()">Back to Menu</button>
                                         </div>
+
+                                        
+    <style>
+        .listening-question-title {
+            color: #343a40;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+        .listening-question-subtitle {
+            color: #495057;
+            margin: 1rem 0;
+        }
+        .listening-question-text {
+            margin-bottom: 2rem;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group input[type="checkbox"]:disabled + label {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .form-control.d-inline-block {
+            width: 150px;
+            margin: 0.5rem 0;
+        }
+    </style>
+    <div id="listening" style="display: none;">
+        <!-- Part 1 -->
+        <h2 class="listening-question-title">Listen and Write</h2>
+        <h3 class="listening-question-title">PART 1 Questions 1-10</h3>
+        <p><i>Complete the notes below.</i></p>
+        <p class="listening-question-subtitle">Write <strong>ONE WORD AND/OR A NUMBER</strong> for each answer.</p>
+        <h4 class="listening-question-subtitle">Buckworth Conservation Group</h4>
+        <audio id="audio-player-1" class="mb-3" controls>
+            <source src="./audio/Test 1 Part 1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <form id="part1-form" class="listening-question-text">
+            <h5>Regular activities</h5>
+            <p><strong>Beach</strong></p>
+            <p>Making sure the beach does not have 
+                <input type="text" class="form-control d-inline-block" id="answer-1" placeholder="Answer 1"> litter on it.
+            </p>
+            <p>No 
+                <input type="text" class="form-control d-inline-block" id="answer-2" placeholder="Answer 2"> pollution.
+            </p>
+            <p><strong>Nature reserve</strong></p>
+            <p>Maintaining paths</p>
+            <p>Nesting boxes for birds installed</p>
+            <p>Next task is taking action to attract 
+                <input type="text" class="form-control d-inline-block" id="answer-3" placeholder="Answer 3"> to the place.
+            </p>
+            <p>Identifying types of 
+                <input type="text" class="form-control d-inline-block" id="answer-4" placeholder="Answer 4">.
+            </p>
+            <p>Building a new 
+                <input type="text" class="form-control d-inline-block" id="answer-5" placeholder="Answer 5">.
+            </p>
+            <h5>Forthcoming events</h5>
+            <p><strong>Saturday</strong></p>
+            <p>Meet at Dunsmore Beach car park</p>
+            <p>Walk across the sands and reach the 
+                <input type="text" class="form-control d-inline-block" id="answer-6" placeholder="Answer 6">.
+            </p>
+            <p>Take a picnic</p>
+            <p>Wear appropriate 
+                <input type="text" class="form-control d-inline-block" id="answer-7" placeholder="Answer 7">.
+            </p>
+            <p><strong>Woodwork session</strong></p>
+            <p>Suitable for 
+                <input type="text" class="form-control d-inline-block" id="answer-8" placeholder="Answer 8"> to participate in.
+            </p>
+            <p>Making 
+                <input type="text" class="form-control d-inline-block" id="answer-9" placeholder="Answer 9"> out of wood.
+            </p>
+            <p>17th, from 10 a.m. to 3 p.m.</p>
+            <p>Cost of session (no camping): $ 
+                <input type="text" class="form-control d-inline-block" id="answer-10" placeholder="Answer 10">.
+            </p>
+        </form>
+
+        <!-- Part 2 -->
+        <h3 class="listening-question-title">PART 2 Questions 11-20</h3>
+        <p><i>Questions 11-14</i></p>
+        <p class="listening-question-subtitle">Choose the correct letter, <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>.</p>
+        <h4 class="listening-question-subtitle">Boat trip round Tasmania</h4>
+        <audio id="audio-player-2" class="mb-3" controls>
+            <source src="./audio/Test 1 Part 2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <form id="part2-form" class="listening-question-text">
+            <div style="margin-bottom: 1rem;">
+                <p>11. What is the maximum number of people who can stand on each side of the boat?</p>
+                <label><input type="radio" name="question11" value="A"> A) 9</label><br>
+                <label><input type="radio" name="question11" value="B"> B) 15</label><br>
+                <label><input type="radio" name="question11" value="C"> C) 18</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>12. What colour are the tour boats?</p>
+                <label><input type="radio" name="question12" value="A"> A) Dark Red</label><br>
+                <label><input type="radio" name="question12" value="B"> B) Jet Black</label><br>
+                <label><input type="radio" name="question12" value="C"> C) Light Green</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>13. What does Lou say about the caves?</p>
+                <label><input type="radio" name="question13" value="A"> A) Only large boats can visit them</label><br>
+                <label><input type="radio" name="question13" value="B"> B) They are dangerous for individuals</label><br>
+                <label><input type="radio" name="question13" value="C"> C) They are only accessible by boat</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>14. What is mentioned about the lighthouse?</p>
+                <label><input type="radio" name="question14" value="A"> A) Its historical significance</label><br>
+                <label><input type="radio" name="question14" value="B"> B) Its construction materials</label><br>
+                <label><input type="radio" name="question14" value="C"> C) Its height</label>
+            </div>
+            <div class="checkbox-group">
+                <p><strong>15-16. Choose TWO letters, A-E</strong></p>
+                <p>Which TWO features of the lighthouse does Lou mention?</p>
+                <label><input type="checkbox" name="question15-16" value="A"> A) Why it was built</label><br>
+                <label><input type="checkbox" name="question15-16" value="B"> B) Who built it</label><br>
+                <label><input type="checkbox" name="question15-16" value="C"> C) How long it took to build</label><br>
+                <label><input type="checkbox" name="question15-16" value="D"> D) Who staffed it</label><br>
+                <label><input type="checkbox" name="question15-16" value="E"> E) What it was built with</label>
+            </div>
+            <div class="checkbox-group">
+                <p><strong>17-18. Choose TWO letters, A-E</strong></p>
+                <p>Which TWO types of creature might come close to the boat?</p>
+                <label><input type="checkbox" name="question17-18" value="A"> A) Sea eagles</label><br>
+                <label><input type="checkbox" name="question17-18" value="B"> B) Fur seals</label><br>
+                <label><input type="checkbox" name="question17-18" value="C"> C) Dolphins</label><br>
+                <label><input type="checkbox" name="question17-18" value="D"> D) Whales</label><br>
+                <label><input type="checkbox" name="question17-18" value="E"> E) Penguins</label>
+            </div>
+            <div class="checkbox-group">
+                <p><strong>19-20. Choose TWO letters, A-E</strong></p>
+                <p>Which TWO points does Lou make about the caves?</p>
+                <label><input type="checkbox" name="question19-20" value="A"> A) Only large tourist boats can visit them</label><br>
+                <label><input type="checkbox" name="question19-20" value="B"> B) The entrances to them are often blocked</label><br>
+                <label><input type="checkbox" name="question19-20" value="C"> C) It is too dangerous for individuals to go near them</label><br>
+                <label><input type="checkbox" name="question19-20" value="D"> D) Someone will explain what is inside them</label><br>
+                <label><input type="checkbox" name="question19-20" value="E"> E) They cannot be reached on foot</label>
+            </div>
+        </form>
+
+        <!-- Part 3 -->
+        <h3 class="listening-question-title">PART 3 Questions 21-30</h3>
+        <p><i>Questions 21-26</i></p>
+        <p class="listening-question-subtitle">Choose the correct letter, <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>.</p>
+        <h4 class="listening-question-subtitle">Work experience for veterinary science students</h4>
+        <audio id="audio-player-3" class="mb-3" controls>
+            <source src="./audio/Test 1 Part 3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <form id="part3-form" class="listening-question-text">
+            <div style="margin-bottom: 1rem;">
+                <p>21. What problem did both Diana and Tim have when arranging their work experience?</p>
+                <label><input type="radio" name="question21" value="A"> A) Making initial contact with suitable farms</label><br>
+                <label><input type="radio" name="question21" value="B"> B) Organising transport to and from the farm</label><br>
+                <label><input type="radio" name="question21" value="C"> C) Finding a placement for the required length of time</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>22. Tim was pleased to be able to help</p>
+                <label><input type="radio" name="question22" value="A"> A) A lamb that had a broken leg</label><br>
+                <label><input type="radio" name="question22" value="B"> B) A sheep that was having difficulty giving birth</label><br>
+                <label><input type="radio" name="question22" value="C"> C) A newly born lamb that was having trouble feeding</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>23. Diana says the sheep on her farm</p>
+                <label><input type="radio" name="question23" value="A"> A) Were of various different varieties</label><br>
+                <label><input type="radio" name="question23" value="B"> B) Were mainly reared for their meat</label><br>
+                <label><input type="radio" name="question23" value="C"> C) Had better quality wool than sheep on the hills</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>24. What did the students learn about adding supplements to chicken feed?</p>
+                <label><input type="radio" name="question24" value="A"> A) These should only be given if specially needed</label><br>
+                <label><input type="radio" name="question24" value="B"> B) It is worth paying extra for the most effective ones</label><br>
+                <label><input type="radio" name="question24" value="C"> C) The amount given at one time should be limited</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>25. What happened when Diana was working with dairy cows?</p>
+                <label><input type="radio" name="question25" value="A"> A) She identified some cows incorrectly</label><br>
+                <label><input type="radio" name="question25" value="B"> B) She accidentally threw some milk away</label><br>
+                <label><input type="radio" name="question25" value="C"> C) She made a mistake when storing milk</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p>26. What did both farmers mention about vets and farming?</p>
+                <label><input type="radio" name="question26" value="A"> A) Vets are failing to cope with some aspects of animal health</label><br>
+                <label><input type="radio" name="question26" value="B"> B) There needs to be a fundamental change in the training of vets</label><br>
+                <label><input type="radio" name="question26" value="C"> C) Some jobs could be done by the farmer rather than by a vet</label>
+            </div>
+            <div class="checkbox-group">
+                <p><strong>27-30. Choose FOUR answers from the box and write the correct letter, A–F, next to questions 27–30.</strong></p>
+                <label><input type="checkbox" name="question27-30" value="A"> A) Tim found this easier than expected</label><br>
+                <label><input type="checkbox" name="question27-30" value="B"> B) Tim thought this was not very clearly organised</label><br>
+                <label><input type="checkbox" name="question27-30" value="C"> C) Diana may do some further study on this</label><br>
+                <label><input type="checkbox" name="question27-30" value="D"> D) They both found the reading required for this was difficult</label><br>
+                <label><input type="checkbox" name="question27-30" value="E"> E) Tim was shocked at something he learned on this module</label><br>
+                <label><input type="checkbox" name="question27-30" value="F"> F) They were both surprised how little is known about some aspects of this</label>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <p><strong>Modules on Veterinary Science course</strong></p>
+                <label>27 Medical terminology <input type="text" class="form-control d-inline-block" id="answer-27" placeholder="Answer 27"></label><br>
+                <label>28 Diet and nutrition <input type="text" class="form-control d-inline-block" id="answer-28" placeholder="Answer 28"></label><br>
+                <label>29 Animal disease <input type="text" class="form-control d-inline-block" id="answer-29" placeholder="Answer 29"></label><br>
+                <label>30 Wildlife medication <input type="text" class="form-control d-inline-block" id="answer-30" placeholder="Answer 30"></label>
+            </div>
+        </form>
+
+        <!-- Part 4 -->
+        <h3 class="listening-question-title">PART 4 Questions 31-40</h3>
+        <p><i>Complete the notes below.</i></p>
+        <p class="listening-question-subtitle">Write <strong>ONE WORD ONLY</strong> for each answer.</p>
+        <h4 class="listening-question-subtitle">Labyrinths</h4>
+        <audio id="audio-player-4" class="mb-3" controls>
+            <source src="./audio/Test 1 Part 4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <form id="part4-form" class="listening-question-text">
+            <p><strong>Definition</strong></p>
+            <p>A winding spiral path leading to a central area</p>
+            <p><strong>Labyrinths compared with mazes</strong></p>
+            <p>Mazes are a type of <input type="text" class="form-control d-inline-block" id="answer-31" placeholder="Answer 31">.</p>
+            <p>– <input type="text" class="form-control d-inline-block" id="answer-32" placeholder="Answer 32"> is needed to navigate through a maze.</p>
+            <p>– The word ‘maze’ is derived from a word meaning a feeling of <input type="text" class="form-control d-inline-block" id="answer-33" placeholder="Answer 33">.</p>
+            <p>Labyrinths represent a journey through life</p>
+            <p>– They have frequently been used in <input type="text" class="form-control d-inline-block" id="answer-34" placeholder="Answer 34"> and prayer.</p>
+            <p><strong>Early examples of the labyrinth spiral</strong></p>
+            <p>Ancient carvings on <input type="text" class="form-control d-inline-block" id="answer-35" placeholder="Answer 35"> have been found across many cultures.</p>
+            <p>The Pima, a Native American tribe, wove the symbol on baskets.</p>
+            <p>Ancient Greeks used the symbol on <input type="text" class="form-control d-inline-block" id="answer-36" placeholder="Answer 36">.</p>
+            <p><strong>Walking labyrinths</strong></p>
+            <p>The largest surviving example of a turf labyrinth once had a big <input type="text" class="form-control d-inline-block" id="answer-37" placeholder="Answer 37"> at its centre.</p>
+            <p><strong>Labyrinths nowadays</strong></p>
+            <p>Believed to have a beneficial impact on mental and physical health, e.g., walking a maze can reduce a person’s <input type="text" class="form-control d-inline-block" id="answer-38" placeholder="Answer 38"> rate.</p>
+            <p>Used in medical and health and fitness settings and also prisons.</p>
+            <p>Popular with patients, visitors, and staff in hospitals.</p>
+            <p>– Patients who can’t walk can use ‘finger labyrinths’ made from <input type="text" class="form-control d-inline-block" id="answer-39" placeholder="Answer 39">.</p>
+            <p>– Research has shown that Alzheimer’s sufferers experience less <input type="text" class="form-control d-inline-block" id="answer-40" placeholder="Answer 40">.</p>
+        </form>
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit Answers</button>
+            <button type="button" class="btn btn-secondary" onclick="goHome()">Back to Menu</button>
+        </div>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.checkbox-group').forEach(group => {
+                const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', () => {
+                        const checkedCount = group.querySelectorAll('input[type="checkbox"]:checked').length;
+                        checkboxes.forEach(cb => {
+                            if (!cb.checked) {
+                                cb.disabled = checkedCount >= 2;
+                            }
+                        });
+                    });
+                });
+            });
+        });
+
+        const correctAnswers = {
+            1: "litter",
+            2: "dogs",
+            3: "insects",
+            4: "butterflies",
+            5: "wall",
+            6: "island",
+            7: "boots",
+            8: "beginners",
+            9: "spoons",
+            10: "35",
+            11: "A",
+            12: "C",
+            13: "B",
+            14: "B",
+            "15-16": ["A", "D"],
+            "17-18": ["B", "C"],
+            "19-20": ["D", "E"],
+            21: "A",
+            22: "B",
+            23: "B",
+            24: "A",
+            25: "C",
+            26: "C",
+            27: "A",
+            28: "E",
+            29: "F",
+            30: "C",
+            31: "puzzle",
+            32: "logic",
+            33: "confusion",
+            34: "meditation",
+            35: "stone",
+            36: "coins",
+            37: "tree",
+            38: "breathing",
+            39: "paper",
+            40: "anxiety"
+        };
+
+        function checkAnswers() {
+            const resultDiv = document.getElementById("result");
+            resultDiv.style.display = "block";
+            let score = 0;
+            let incorrectQuestions = [];
+            let resultHTML = "<h5>Results:</h5><ul>";
+
+            // Part 1: Text inputs
+            for (let i = 1; i <= 10; i++) {
+                const userAnswer = document.getElementById(`answer-${i}`).value.trim().toLowerCase();
+                const correctAnswer = correctAnswers[i].toLowerCase();
+                const isCorrect = userAnswer === correctAnswer;
+                if (isCorrect) {
+                    score++;
+                    resultHTML += `<li>Question ${i}: <span class="correct">Correct (Your answer: ${userAnswer})</span></li>`;
+                } else {
+                    incorrectQuestions.push(`Question ${i}: Your answer: ${userAnswer}, Correct: ${correctAnswer}`);
+                    resultHTML += `<li>Question ${i}: <span class="incorrect">Incorrect (Your answer: ${userAnswer}, Correct: ${correctAnswer})</span></li>`;
+                }
+            }
+
+            // Part 2: Radio buttons (11-14)
+            for (let i = 11; i <= 14; i++) {
+                const userAnswer = document.querySelector(`input[name="question${i}"]:checked`)?.value || "";
+                const correctAnswer = correctAnswers[i];
+                const isCorrect = userAnswer === correctAnswer;
+                if (isCorrect && userAnswer !== "") {
+                    score++;
+                    resultHTML += `<li>Question ${i}: <span class="correct">Correct (Your answer: ${userAnswer})</span></li>`;
+                } else {
+                    incorrectQuestions.push(`Question ${i}: Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer}`);
+                    resultHTML += `<li>Question ${i}: <span class="incorrect">Incorrect (Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer})</span></li>`;
+                }
+            }
+
+            // Part 2: Checkbox questions (15-16, 17-18, 19-20)
+            const checkboxGroups = ["15-16", "17-18", "19-20"];
+            checkboxGroups.forEach(group => {
+                const userAnswers = Array.from(document.querySelectorAll(`input[name="question${group}"]:checked`)).map(cb => cb.value).sort();
+                const correctAnswersSorted = correctAnswers[group].sort();
+                const isCorrect = userAnswers.length === 2 && userAnswers.every((val, idx) => val === correctAnswersSorted[idx]);
+                if (isCorrect) {
+                    score += 2; // Two points for each correct pair
+                    resultHTML += `<li>Questions ${group}: <span class="correct">Correct (Your answers: ${userAnswers.join(", ")})</span></li>`;
+                } else {
+                    incorrectQuestions.push(`Questions ${group}: Your answers: ${userAnswers.join(", ") || "None"}, Correct: ${correctAnswersSorted.join(", ")}`);
+                    resultHTML += `<li>Questions ${group}: <span class="incorrect">Incorrect (Your answers: ${userAnswers.join(", ") || "None"}, Correct: ${correctAnswersSorted.join(", ")})</span></li>`;
+                }
+            });
+
+            // Part 3: Radio buttons (21-26)
+            for (let i = 21; i <= 26; i++) {
+                const userAnswer = document.querySelector(`input[name="question${i}"]:checked`)?.value || "";
+                const correctAnswer = correctAnswers[i];
+                const isCorrect = userAnswer === correctAnswer;
+                if (isCorrect && userAnswer !== "") {
+                    score++;
+                    resultHTML += `<li>Question ${i}: <span class="correct">Correct (Your answer: ${userAnswer})</span></li>`;
+                } else {
+                    incorrectQuestions.push(`Question ${i}: Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer}`);
+                    resultHTML += `<li>Question ${i}: <span class="incorrect">Incorrect (Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer})</span></li>`;
+                }
+            }
+
+            // Part 3: Text inputs (27-30)
+            for (let i = 27; i <= 30; i++) {
+                const userAnswer = document.getElementById(`answer-${i}`).value.trim().toUpperCase();
+                const correctAnswer = correctAnswers[i];
+                const isCorrect = userAnswer === correctAnswer;
+                if (isCorrect) {
+                    score++;
+                    resultHTML += `<li>Question ${i}: <span class="correct">Correct (Your answer: ${userAnswer})</span></li>`;
+                } else {
+                    incorrectQuestions.push(`Question ${i}: Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer}`);
+                    resultHTML += `<li>Question ${i}: <span class="incorrect">Incorrect (Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer})</span></li>`;
+                }
+            }
+
+            // Part 4: Text inputs (31-40)
+            for (let i = 31; i <= 40; i++) {
+                const userAnswer = document.getElementById(`answer-${i}`).value.trim().toLowerCase();
+                const correctAnswer = correctAnswers[i].toLowerCase();
+                const isCorrect = userAnswer === correctAnswer;
+                if (isCorrect) {
+                    score++;
+                    resultHTML += `<li>Question ${i}: <span class="correct">Correct (Your answer: ${userAnswer})</span></li>`;
+                } else {
+                    incorrectQuestions.push(`Question ${i}: Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer}`);
+                    resultHTML += `<li>Question ${i}: <span class="incorrect">Incorrect (Your answer: ${userAnswer || "None"}, Correct: ${correctAnswer})</span></li>`;
+                }
+            }
+
+            resultHTML += `</ul><p><strong>Total Score: ${score}/40</strong></p>`;
+            if (incorrectQuestions.length > 0) {
+                resultHTML += `<h5>Incorrect Questions:</h5><ul>`;
+                incorrectQuestions.forEach(q => {
+                    resultHTML += `<li>${q}</li>`;
+                });
+                resultHTML += `</ul>`;
+            } else {
+                resultHTML += `<p><strong>Congratulations! All answers are correct.</strong></p>`;
+            }
+
+            resultDiv.innerHTML = resultHTML;
+        }
+
+        function goHome() {
+            window.location.href = "menu.html"; // Adjust as needed
+        }
+    </script>
 
                                         <div id="speaking" style="display:none;">
                                             <h2>Speak the word</h2>
