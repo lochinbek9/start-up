@@ -55,3 +55,45 @@ ul,
 ol {
   list-style: none;
 }
+
+
+
+
+
+.listening-question-title {
+  color: #343a40;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.listening-question-subtitle {
+  color: #495057;
+  margin: 1rem 0;
+}
+.listening-question-text {
+  margin-bottom: 2rem;
+}
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-group input[type="checkbox"]:disabled + label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.form-control.d-inline-block {
+  width: 150px;
+  margin: 0.5rem 0;
+}
