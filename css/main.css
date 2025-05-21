@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css2?family=Muli:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
 img {
   width: 100%;
 }
@@ -96,4 +102,20 @@ ol {
 .form-control.d-inline-block {
   width: 150px;
   margin: 0.5rem 0;
+}
+
+.reading-text{
+  
+  color: #7D7987;
+  font-family: "Muli";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px; /* 166.667% */
+}
+
+hr{
+  display: inline-block; 
+  width: 100%;
+  border: 2px solid crimson;
 }
